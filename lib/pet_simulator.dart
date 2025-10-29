@@ -41,8 +41,8 @@ class Pet {
   void sleep() {
     hunger += 1;
     happines += 1;
-    if (happines > 10) happines = 10;
-    if (hunger > 10) hunger = 10;
+    if (happines > 100) happines = 100;
+    if (hunger > 100) hunger = 100;
     print('$name tidur dengan nyenyak tetapi mungkin ia sedikit lapar');
     _gainExp(2);
   }
@@ -50,7 +50,7 @@ class Pet {
   void showStatus() {
     print('\n==== status $name ====');
     print('Level Persahabatan: $friendship | exp: $exp');
-    print('Kenyang: ${10 - hunger}/100');
+    print('Kenyang: ${100 - hunger}/100');
     print('Kebahagiaan: $happines/100');
     if (hunger >= 9) print('$name sangat lapar!');
     if (happines <= 2) print('$name kelihatan sedih ...');
@@ -58,7 +58,7 @@ class Pet {
   }
 
   bool isAlive() {
-    if (hunger >= 10) {
+    if (hunger >= 100) {
       print('$name terlalu lapar dan pingsan!');
       return false;
     } else {
